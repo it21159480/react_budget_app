@@ -1,7 +1,7 @@
 import React, { useContext , useState } from 'react';
 import { AppContext } from '../context/AppContext';
 const Budget = () => {
-    const { expenses, dispatch  } = useContext(AppContext);
+    const { expenses, dispatch, budget  } = useContext(AppContext);
     
 
     function mssg (event) {
@@ -30,7 +30,7 @@ const Budget = () => {
 
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: £<input type='number' onChange={mssg}  /></span>
+            <span>Budget: £<input type='number' onChange={mssg}  />{budget}</span>
         </div>
     );
 };
